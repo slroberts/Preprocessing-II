@@ -1,1 +1,22 @@
 // Navigation Styles here
+nav {
+  background-color: @white;
+  border-bottom: 2px dashed @navigation-border;
+
+  .container {
+    .flex(space-between, center, row);
+    height: 10rem;
+    padding-right: 2rem;
+
+    .nav-links {
+      .flex(space-around, center, row);
+      width: 33rem;
+
+      .link {
+        text-decoration: none;
+        color: @font-color;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
