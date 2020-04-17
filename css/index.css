@@ -205,6 +205,11 @@ nav .container .nav-links .link {
   color: #212529;
   font-size: 1.6rem;
 }
+@media (max-width: 850px) {
+  nav .container .brand {
+    font-size: 3.5rem;
+  }
+}
 @media (max-width: 500px) {
   nav .container {
     display: flex;
