@@ -6,12 +6,29 @@
   flex-direction: @direction;
 }
 
-.button(@width) {
+.button(@width, @radius) {
   background-color: @button-bg;
   color: @white;
   .flex(center, center, row);
   width: @width;
   padding: 1.2rem 0;
   font-size: 1.7rem;
-  border-radius: 1.4rem;
+  border-radius: @radius;
+}
+
+.hover(@time) {
+  &:hover {
+    animation: ease-in forwards fade;
+    animation-duration: @time;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.75;
+  }
 }

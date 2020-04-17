@@ -1,3 +1,11 @@
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -311,6 +319,10 @@ nav .container .nav-links .link {
   font-size: 1.7rem;
   border-radius: 1.4rem;
 }
+.home .content-pick .destination .btn:hover {
+  animation: ease-in forwards fade;
+  animation-duration: 300ms;
+}
 @media (max-width: 850px) {
   .home .content-pick .destination {
     width: 80%;
@@ -390,4 +402,8 @@ nav .container .nav-links .link {
   font-size: 1.7rem;
   border-radius: 1.4rem;
   border: none;
+}
+.home .select-form form .form-btn:hover {
+  animation: ease-in forwards fade;
+  animation-duration: 300ms;
 }
