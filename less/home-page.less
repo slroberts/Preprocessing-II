@@ -85,7 +85,7 @@
         .button(19.25rem);
       }
 
-      @media @mobile {
+      @media @tablet {
         width: 80%;
 
         .btn {
@@ -94,10 +94,61 @@
       }
     }
 
-    @media @mobile {
+    @media @tablet {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+    }
+  }
+
+  .select-form {
+    padding: 30px 0;
+    border-top: 2px dashed @navigation-border;
+
+    form {
+      width: 100%;
+      .flex(space-between, center, row);
+      flex-wrap: wrap;
+
+      .form-group {
+        width: 48%;
+
+        @media @mobile {
+          width: 100%;
+        }
+
+        .form-label {
+          font-size: 1.5rem;
+
+          .highlight {
+            color: crimson;
+          }
+        }
+
+        input,
+        select,
+        textarea {
+          width: 100%;
+          padding: 1rem;
+          margin: 1rem 0 2rem;
+          font-size: 1.4rem;
+        }
+
+        select {
+          height: 4rem;
+          border-radius: 0;
+          background-color: @white;
+        }
+
+        &:last-of-type {
+          width: 100%;
+        }
+      }
+
+      .form-btn {
+        .button(19.25rem);
+        border: none;
+      }
     }
   }
 } // home

@@ -168,7 +168,7 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   .container {
     padding: 0 3rem;
   }
@@ -311,7 +311,7 @@ nav .container .nav-links .link {
   font-size: 1.7rem;
   border-radius: 1.4rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   .home .content-pick .destination {
     width: 80%;
   }
@@ -328,10 +328,65 @@ nav .container .nav-links .link {
     border-radius: 1.4rem;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 850px) {
   .home .content-pick {
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+}
+.home .select-form {
+  padding: 30px 0;
+  border-top: 2px dashed #c0c0c0;
+}
+.home .select-form form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.home .select-form form .form-group {
+  width: 48%;
+}
+@media (max-width: 500px) {
+  .home .select-form form .form-group {
+    width: 100%;
+  }
+}
+.home .select-form form .form-group .form-label {
+  font-size: 1.5rem;
+}
+.home .select-form form .form-group .form-label .highlight {
+  color: crimson;
+}
+.home .select-form form .form-group input,
+.home .select-form form .form-group select,
+.home .select-form form .form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0 2rem;
+  font-size: 1.4rem;
+}
+.home .select-form form .form-group select {
+  height: 4rem;
+  border-radius: 0;
+  background-color: #ffffff;
+}
+.home .select-form form .form-group:last-of-type {
+  width: 100%;
+}
+.home .select-form form .form-btn {
+  background-color: #17a2b8;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 19.25rem;
+  padding: 1.2rem 0;
+  font-size: 1.7rem;
+  border-radius: 1.4rem;
+  border: none;
 }
