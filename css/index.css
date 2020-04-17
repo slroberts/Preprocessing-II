@@ -368,6 +368,7 @@ nav .container .nav-links .link {
   padding: 1rem;
   margin: 1rem 0 2rem;
   font-size: 1.4rem;
+  border: 1px solid #c0c0c0;
 }
 .home .select-form form .form-group select {
   height: 4rem;
