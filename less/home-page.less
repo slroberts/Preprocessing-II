@@ -1,13 +1,18 @@
 .home {
+  .hero-section {
+    border-bottom: 2px dashed @navigation-border;
+    padding-bottom: 2rem;
 
+    h2 {
+      margin-top: 2rem;
+    }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -21,11 +26,27 @@
         border-radius: 10px;
       }
     }
+
+    @media @mobile {
+      .text-content,
+      .img-content {
+        width: 100%;
+        padding: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -45,6 +66,10 @@
     img {
       border-radius: 10px;
     }
+
+    @media @mobile {
+      width: 100%;
+    }
   }
 
   .content-pick {
@@ -56,6 +81,77 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn {
+        .button(19.25rem, 1.4rem);
+        .hover(300ms);
+      }
+
+      @media @tablet {
+        width: 80%;
+
+        .btn {
+          .button(100%, 1.4rem);
+        }
+      }
+    }
+
+    @media @tablet {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }
-}// home
+
+  .select-form {
+    padding: 30px 0;
+    border-top: 2px dashed @navigation-border;
+
+    form {
+      width: 100%;
+      .flex(space-between, center, row);
+      flex-wrap: wrap;
+
+      .form-group {
+        width: 48%;
+
+        @media @mobile {
+          width: 100%;
+        }
+
+        .form-label {
+          font-size: 1.5rem;
+
+          .highlight {
+            color: crimson;
+          }
+        }
+
+        input,
+        select,
+        textarea {
+          width: 100%;
+          padding: 1rem;
+          margin: 1rem 0 2rem;
+          font-size: 1.4rem;
+          border: 1px solid @silver;
+        }
+
+        select {
+          height: 4rem;
+          border-radius: 0;
+          background-color: @white;
+        }
+
+        &:last-of-type {
+          width: 100%;
+        }
+      }
+
+      .form-btn {
+        .button(19.25rem, 1.4rem);
+        .hover(300ms);
+        border: none;
+      }
+    }
+  }
+} // home
